@@ -5,6 +5,10 @@ from art import *
 
 
 def guessing_numbers():
+    """
+    Це гра "Вгадай число". В ній у вас е безкінечні спроби вгадати число.
+    :return:
+    """
     num = random.randrange(1, 100)
     print("Guess the number 1 - 100\nYou have endless attempts: ")
     while True:
@@ -19,6 +23,11 @@ def guessing_numbers():
 
 
 def preattytable_move():
+    """
+    Це балиця з найпопулярнішими фільмами. Цю таблицю можна розширити за допомогою редагування файлу csv.
+    Цей файл знаходиться у папці files.
+    :return:
+    """
     with open("files/move_file.csv") as fp:
         mytable = from_csv(fp)
     return mytable
@@ -27,6 +36,10 @@ def preattytable_move():
 choice = 0
 tprint("Make a choice!", font="small", chr_ignore=True)
 while True:
+    """
+    Це головне меню бота. Тут ві вибираїте що саме вам потрібно.
+    :return:
+    """
     print("(1)Jokes, (2)Recommended movies, (3)Play the game")
 
     choice = input("#> ")
